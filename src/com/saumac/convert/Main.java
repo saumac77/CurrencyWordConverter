@@ -7,11 +7,11 @@ import com.saumac.interfaces.Standards;
 
 /**
  * @author svyas013
- *
+ * free.currencyconverterapi.com/api/v5/convert?q=USD_INR&compact=
  */
 public class Main implements Standards {
 
-	public static float USD = 64.28f;
+	public static float USD = 67.79f;
 //	public static float number = 64.82f;
 	public static float INR = 0.016f;
 
