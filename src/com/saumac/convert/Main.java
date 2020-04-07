@@ -7,13 +7,15 @@ import com.saumac.interfaces.Standards;
 
 /**
  * @author svyas013
- *
+ * free.currencyconverterapi.com/api/v5/convert?q=USD_INR&compact=
  */
 public class Main implements Standards {
 
-	public static float USD = 64.28f;
+	public static float USD = 67.79f;
 //	public static float number = 64.82f;
 	public static float INR = 0.016f;
+	
+	public String test = "Nait please review this [pill requestr";
 
 	public enum largeNumbers {
 		million(1e+6), billion(1e+9), trillion(1e+12), thousand(1e+3), hundred(1e+2), lakh(1e+5), crore(1e+7), zero(1);
