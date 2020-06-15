@@ -15,7 +15,6 @@ public class Main implements Standards {
 //	public static float number = 64.82f;
 	public static float INR = 0.016f;
 
-
 	public enum largeNumbers {
 		million(1e+6), billion(1e+9), trillion(1e+12), thousand(1e+3), hundred(1e+2), lakh(1e+5), crore(1e+7), zero(1);
 
