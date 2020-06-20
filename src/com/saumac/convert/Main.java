@@ -13,8 +13,10 @@ import com.saumac.interfaces.Standards;
  */
 public class Main implements Standards {
 
-	public static float USD = 75.96f;
+	public static float USD = 76.25f;
 	public static float INR = 1/USD;
+	public static String dollar = "$";
+	public static String rupees = "Rs.";
 
 	/**
 	 * @param args
@@ -24,18 +26,18 @@ public class Main implements Standards {
 
 		UsdToInr(1, LargeNumbers.million);
 		System.out.println("\n----------------------------------------------------------------------\n");
-//		InrToUsd(15000, Main.largeNumbers.crore);
+		InrToUsd(1, LargeNumbers.crore);
 
 	}
 
 	public static void UsdToInr(double number, LargeNumbers i) {
-		UsStandardConversion.USstandard(number, i, USD);
-		UsStandardConversion.INstandard(number, i, INR);
+		UsStandardConversion.USstandard(number, i, USD, rupees);
+		UsStandardConversion.INstandard(number, i, USD, rupees);
 	}
 
 	public static void InrToUsd(double number, LargeNumbers i) {
-		UsStandardConversion.USstandard(number, i, USD);
-		UsStandardConversion.INstandard(number, i, INR);
+		UsStandardConversion.USstandard(number, i, INR, dollar);
+		UsStandardConversion.INstandard(number, i, INR, dollar);
 	}
 
 }

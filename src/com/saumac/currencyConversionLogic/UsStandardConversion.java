@@ -68,7 +68,7 @@ public class UsStandardConversion implements Standards {
 		return numeral.longValue();
 	}
 	
-	public static void USstandard(double number, LargeNumbers digits, float currency) {
+	public static void USstandard(double number, LargeNumbers digits, float currency, String currencySymbol) {
 		// TODO Auto-generated method stub
 		
 		float resultNumber = (float) (number * currency);
@@ -80,64 +80,64 @@ public class UsStandardConversion implements Standards {
 
 		switch (count - 1) {
 		case 0:
-			System.out.println("Answer: Rs " + NumberInWords);
+			System.out.println("Answer: " + currencySymbol + " " + NumberInWords);
 			break;
 		case 1:
-			System.out.println("Answer: Rs " + NumberInWords + " (Tens)");
+			System.out.println("Answer: " + currencySymbol + " " + NumberInWords + " (Tens)");
 			break;
 		case 2:
-			System.out.println("Answer: Rs " + NumberInWords.substring(0, 1) + " Hundred");
+			System.out.println("Answer: " + currencySymbol + " " + NumberInWords.substring(0, 1) + " Hundred");
 			break;
 		case 3:
 			System.out.println(
-					"Answer: Rs " + NumberInWords.substring(0, 1) + "." + NumberInWords.substring(1, 3) + " Thousand");
+					"Answer: " + currencySymbol + " " + NumberInWords.substring(0, 1) + "." + NumberInWords.substring(1, 3) + " Thousand");
 			break;
 		case 4:
 			System.out.println(
-					"Answer: Rs " + NumberInWords.substring(0, 2) + "." + NumberInWords.substring(2, 4) + " Thousand");
+					"Answer: " + currencySymbol + " " + NumberInWords.substring(0, 2) + "." + NumberInWords.substring(2, 4) + " Thousand");
 			break;
 		case 5:
 			System.out.println(
-					"Answer: Rs " + NumberInWords.substring(0, 3) + "." + NumberInWords.substring(3, 5) + " Thousand");
+					"Answer: " + currencySymbol + " " + NumberInWords.substring(0, 3) + "." + NumberInWords.substring(3, 5) + " Thousand");
 			break;
 		case 6:
 			System.out.println(
-					"Answer: Rs " + NumberInWords.substring(0, 1) + "." + NumberInWords.substring(1, 3) + " Million");
+					"Answer: " + currencySymbol + " " + NumberInWords.substring(0, 1) + "." + NumberInWords.substring(1, 3) + " Million");
 			break;
 		case 7:
 			System.out.println(
-					"Answer: Rs " + NumberInWords.substring(0, 2) + "." + NumberInWords.substring(2, 4) + " Million");
+					"Answer: " + currencySymbol + " " + NumberInWords.substring(0, 2) + "." + NumberInWords.substring(2, 4) + " Million");
 			break;
 		case 8:
 			System.out.println(
-					"Answer: Rs " + NumberInWords.substring(0, 3) + "." + NumberInWords.substring(3, 5) + " Million");
+					"Answer: " + currencySymbol + " " + NumberInWords.substring(0, 3) + "." + NumberInWords.substring(3, 5) + " Million");
 			break;
 		case 9:
 			System.out.println(
-					"Answer: Rs " + NumberInWords.substring(0, 1) + "." + NumberInWords.substring(1, 3) + " Billion");
+					"Answer: " + currencySymbol + " " + NumberInWords.substring(0, 1) + "." + NumberInWords.substring(1, 3) + " Billion");
 			break;
 		case 10:
 			System.out.println(
-					"Answer: Rs " + NumberInWords.substring(0, 2) + "." + NumberInWords.substring(2, 4) + " Billion");
+					"Answer: " + currencySymbol + " " + NumberInWords.substring(0, 2) + "." + NumberInWords.substring(2, 4) + " Billion");
 			break;
 		case 11:
 			System.out.println(
-					"Answer: Rs " + NumberInWords.substring(0, 3) + "." + NumberInWords.substring(3, 5) + " Billion");
+					"Answer: " + currencySymbol + " " + NumberInWords.substring(0, 3) + "." + NumberInWords.substring(3, 5) + " Billion");
 			break;
 		case 12:
 			System.out.println(
-					"Answer: Rs " + NumberInWords.substring(0, 1) + "." + NumberInWords.substring(1, 3) + " Trillion");
+					"Answer: " + currencySymbol + " " + NumberInWords.substring(0, 1) + "." + NumberInWords.substring(1, 3) + " Trillion");
 			break;
 		case 13:
 			System.out.println(
-					"Answer: Rs " + NumberInWords.substring(0, 2) + "." + NumberInWords.substring(2, 4) + " Trillion");
+					"Answer: " + currencySymbol + " " + NumberInWords.substring(0, 2) + "." + NumberInWords.substring(2, 4) + " Trillion");
 			break;
 		}
 	}
 
-	public static void INstandard(double number, LargeNumbers digits, float currency) {
+	public static void INstandard(double number, LargeNumbers digits, float inrValue, String currencySymbol) {
 		
-		float resultNumber = (float) (number * currency);
+		float resultNumber = (float) (number * inrValue);
 		
 		Long Number = convertToNumeral(resultNumber, digits);
 		String NumberInWords = Long.toString(Number);
@@ -146,56 +146,56 @@ public class UsStandardConversion implements Standards {
 
 		switch (count - 1) {
 		case 0:
-			System.out.println("Answer: Rs " + NumberInWords);
+			System.out.println("Answer: " + currencySymbol + " " + NumberInWords);
 			break;
 		case 1:
-			System.out.println("Answer: Rs " + NumberInWords + " (Tens)");
+			System.out.println("Answer: " + currencySymbol + " " + NumberInWords + " (Tens)");
 			break;
 		case 2:
-			System.out.println("Answer: Rs " + NumberInWords.substring(0, 1) + " Hundred");
+			System.out.println("Answer: " + currencySymbol + " " + NumberInWords.substring(0, 1) + " Hundred");
 			break;
 		case 3:
 			System.out.println(
-					"Answer: Rs " + NumberInWords.substring(0, 1) + "." + NumberInWords.substring(1, 3) + " Thousand");
+					"Answer: " + currencySymbol + " " + NumberInWords.substring(0, 1) + "." + NumberInWords.substring(1, 3) + " Thousand");
 			break;
 		case 4:
 			System.out.println(
-					"Answer: Rs " + NumberInWords.substring(0, 2) + "." + NumberInWords.substring(2, 4) + " Thousand");
+					"Answer: " + currencySymbol + " " + NumberInWords.substring(0, 2) + "." + NumberInWords.substring(2, 4) + " Thousand");
 			break;
 		case 5:
 			System.out.println(
-					"Answer: Rs " + NumberInWords.substring(0, 1) + "." + NumberInWords.substring(1, 3) + " Lakh");
+					"Answer: " + currencySymbol + " " + NumberInWords.substring(0, 1) + "." + NumberInWords.substring(1, 3) + " Lakh");
 			break;
 		case 6:
 			System.out.println(
-					"Answer: Rs " + NumberInWords.substring(0, 2) + "." + NumberInWords.substring(1, 3) + " Lakh");
+					"Answer: " + currencySymbol + " " + NumberInWords.substring(0, 2) + "." + NumberInWords.substring(1, 3) + " Lakh");
 			break;
 		case 7:
 			System.out.println(
-					"Answer: Rs " + NumberInWords.substring(0, 1) + "." + NumberInWords.substring(1, 3) + " Crore");
+					"Answer: " + currencySymbol + " " + NumberInWords.substring(0, 1) + "." + NumberInWords.substring(1, 3) + " Crore");
 			break;
 		case 8:
 			System.out.println(
-					"Answer: Rs " + NumberInWords.substring(0, 2) + "." + NumberInWords.substring(3, 5) + " Crore");
+					"Answer: " + currencySymbol + " " + NumberInWords.substring(0, 2) + "." + NumberInWords.substring(3, 5) + " Crore");
 			break;
 		case 9:
 			System.out.println(
-					"Answer: Rs " + NumberInWords.substring(0, 3) + "." + NumberInWords.substring(1, 3) + " Crore");
+					"Answer: " + currencySymbol + " " + NumberInWords.substring(0, 3) + "." + NumberInWords.substring(1, 3) + " Crore");
 			break;
 		case 10:
 			System.out.println(
-					"Answer: Rs " + NumberInWords.substring(0, 4) + "." + NumberInWords.substring(2, 4) + " Crore");
+					"Answer: " + currencySymbol + " " + NumberInWords.substring(0, 4) + "." + NumberInWords.substring(2, 4) + " Crore");
 			break;
 		case 11:
-			System.out.println("Answer: Rs " + NumberInWords.substring(0, 2) + "." + NumberInWords.substring(3, 5)
+			System.out.println("Answer: " + currencySymbol + " " + NumberInWords.substring(0, 2) + "." + NumberInWords.substring(3, 5)
 					+ " Thousand Crore");
 			break;
 		case 12:
-			System.out.println("Answer: Rs " + NumberInWords.substring(0, 1) + "." + NumberInWords.substring(1, 3)
+			System.out.println("Answer: " + currencySymbol + " " + NumberInWords.substring(0, 1) + "." + NumberInWords.substring(1, 3)
 					+ " Lakh Crore");
 			break;
 		case 13:
-			System.out.println("Answer: Rs " + NumberInWords.substring(0, 2) + "." + NumberInWords.substring(2, 4)
+			System.out.println("Answer: " + currencySymbol + " " + NumberInWords.substring(0, 2) + "." + NumberInWords.substring(2, 4)
 					+ " Lakh Crore");
 			break;
 		}
