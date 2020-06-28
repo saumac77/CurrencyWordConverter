@@ -24,20 +24,22 @@ public class Main implements Standards {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		UsdToInr(1, LargeNumbers.million);
+		/*
+		 * UsdToInr(7, LargeNumbers.million); System.out.println(
+		 * "\n----------------------------------------------------------------------\n")
+		 * ; InrToUsd(1, LargeNumbers.crore);
+		 */
+		
+		UsStandardConversion UsdToInr = new UsStandardConversion();
+		UsStandardConversion InrToUsd = new UsStandardConversion();
+		
+		UsdToInr.USstandard(700, LargeNumbers.million, USD, rupees);
+		UsdToInr.INstandard(700, LargeNumbers.million, USD, rupees);
+		
 		System.out.println("\n----------------------------------------------------------------------\n");
-		InrToUsd(1, LargeNumbers.crore);
+		
+		InrToUsd.USstandard(1, LargeNumbers.crore, INR, dollar);
+		InrToUsd.INstandard(1, LargeNumbers.crore, INR, dollar);
 
 	}
-
-	public static void UsdToInr(double number, LargeNumbers i) {
-		UsStandardConversion.USstandard(number, i, USD, rupees);
-		UsStandardConversion.INstandard(number, i, USD, rupees);
-	}
-
-	public static void InrToUsd(double number, LargeNumbers i) {
-		UsStandardConversion.USstandard(number, i, INR, dollar);
-		UsStandardConversion.INstandard(number, i, INR, dollar);
-	}
-
 }

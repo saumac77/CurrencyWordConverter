@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.saumac.pojo;
+package com.saumac.constants;
 
 /**
  * @author svyas013
