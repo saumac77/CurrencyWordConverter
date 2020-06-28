@@ -3,6 +3,7 @@
  */
 package com.saumac.convert;
 
+import com.saumac.currencyConversionLogic.InStandardConversion;
 import com.saumac.currencyConversionLogic.UsStandardConversion;
 import com.saumac.enums.LargeNumbers;
 import com.saumac.interfaces.Standards;
@@ -13,7 +14,7 @@ import com.saumac.interfaces.Standards;
  */
 public class Main implements Standards {
 
-	public static float USD = 76.25f;
+	public static float USD = 75.63f;
 	public static float INR = 1/USD;
 	public static String dollar = "$";
 	public static String rupees = "Rs.";
@@ -30,16 +31,26 @@ public class Main implements Standards {
 		 * ; InrToUsd(1, LargeNumbers.crore);
 		 */
 		
-		UsStandardConversion UsdToInr = new UsStandardConversion();
-		UsStandardConversion InrToUsd = new UsStandardConversion();
+		UsStandardConversion convertToUsStandard = new UsStandardConversion();
+		InStandardConversion convertToInStandard = new InStandardConversion();
 		
-		UsdToInr.USstandard(700, LargeNumbers.million, USD, rupees);
-		UsdToInr.INstandard(700, LargeNumbers.million, USD, rupees);
+//		System.out.println("Input: \n");
 		
-		System.out.println("\n----------------------------------------------------------------------\n");
+		System.out.println("Output: \n");
 		
-		InrToUsd.USstandard(1, LargeNumbers.crore, INR, dollar);
-		InrToUsd.INstandard(1, LargeNumbers.crore, INR, dollar);
+		System.out.println("--------------------------------USD to INR--------------------------------------\n");
+		
+		System.out.println(">>>> US Standard >>>>");
+		convertToUsStandard.USstandard(35.7, LargeNumbers.million, USD, rupees);
+		System.out.println("\n>>>> IN Standard >>>>");
+		convertToInStandard.INstandard(35.7, LargeNumbers.million, USD, rupees);
+		
+		System.out.println("\n--------------------------------INR to USD--------------------------------------\n");
+		
+		System.out.println(">>>> US Standard >>>>");
+		convertToUsStandard.USstandard(1, LargeNumbers.crore, INR, dollar);
+		System.out.println("\n>>>> IN Standard >>>>");
+		convertToInStandard.INstandard(1, LargeNumbers.crore, INR, dollar);
 
 	}
 }
